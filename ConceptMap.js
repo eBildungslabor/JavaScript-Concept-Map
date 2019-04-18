@@ -90,12 +90,12 @@ window.ConceptMap = function() {
       var topic2 = fact.substr(secondQuote + 1).trim();
 
       return {concept1: topic1, relation: relation, concept2: topic2};
-    } else if (/^([A-Z][a-z]* )+([a-z]+ )+[A-Z][a-z]*( [A-Z][a-z]*)*$/.test(fact)) {
-      var words = fact.split(/( [a-z]+)+/g);
+    } else if (/^([A-Z ÄÖÜ][a-z äöü]* )+([a-z äöü]+ )+[A-Z ÄÖÜ][a-z äöü]*( [A-Z ÄÖÜ][a-z äöü]*)*$/.test(fact)) {
+      var words = fact.split(/( [a-z äöü]+)+/g);
 
       var firstLowerCaseWord = fact.indexOf(/ [a-z]/);
 
-      var firstUpperAfterRelation = fact.indexOf(/ [A-z]/, firstLowerCaseWord + 1);
+      var firstUpperAfterRelation = fact.indexOf(/ [A-z ÄÖÜ äöü]/, firstLowerCaseWord + 1);
       var topic1 = words[0].trim();
       var topic2 = words[words.length-1].trim();
       var relation = fact.substr(topic1.length, fact.length-topic1.length-topic2.length).trim();
