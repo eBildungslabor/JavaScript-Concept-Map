@@ -4,16 +4,15 @@ Copyright (C) 2011 by Allain Lalonde (allain.lalonde@gmail.com)
 See the file LICENSE.txt for copying permission.
 */
 body {
-  margin: 0;
-  padding: 0;
+  margin: 5;
+  padding: 5;
 }
 
 .concept {
   position: absolute;
   background-color: #fff;
-  padding: 5px 10px;
-  border: 1px solid #ccc;   
-  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 1px solid #ccc;    
 }
 
 #container {
